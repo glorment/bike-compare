@@ -1,0 +1,6 @@
+{
+    "env":{
+        "MONGO_ATLAS_USER":"cmc",
+        "MONGO_ATLAS_PW":"mingcheung"
+    }
+}
