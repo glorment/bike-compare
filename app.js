@@ -5,6 +5,8 @@ const bodyParser = require('body-parser')
 const mongoose = require('mongoose');
 
 const crcRoutes= require('./api/routes/crc')
+const turfclubRoutes = require('./api/routes/turfclub')
+
 
 mongoose.connect('mongodb://'+
                     process.env.MONGO_ATLAS_USER+
@@ -30,6 +32,7 @@ app.use((req,res,next)=>{
 })
 
 app.use('/crc', crcRoutes);
+app.use('/turfclub',turfclubRoutes);
 
 app.use((req , res  ,next ) => {
     const error = new Error('Not found');
